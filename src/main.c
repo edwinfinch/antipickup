@@ -2,7 +2,6 @@
  
 Window* window;
 TextLayer *text_layer;
-TextLayer *debug_layer;
 
 int lineNumber = 1;
 bool goingUp = false;
@@ -152,22 +151,14 @@ void window_load(Window *window)
     text_layer_set_text_color(text_layer, GColorBlack);
 	text_layer_set_text_alignment(text_layer, GTextAlignmentCenter);
 	layer_add_child(window_get_root_layer(window), (Layer*) text_layer);
-	
-	debug_layer = text_layer_create(GRect(0, 0, 144, 168));
-    text_layer_set_background_color(debug_layer, GColorClear);
-	text_layer_set_font(debug_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
-    text_layer_set_text_color(debug_layer, GColorBlack);
-	text_layer_set_text_alignment(debug_layer, GTextAlignmentCenter);
  
-	layer_add_child(window_layer, (Layer*) debug_layer);
-	text_layer_set_text(text_layer, "Press up to go back, down to go forward. Press select to switch between the time and lines.");
+	text_layer_set_text(text_layer, "Press up to go forward, down to go back.");
 }
  
 /* Un-load all Window sub-elements */
 void window_unload(Window *window)
 {
     text_layer_destroy(text_layer);
-	text_layer_destroy(debug_layer);
 }
  
 /* Initialize the main app elements */
