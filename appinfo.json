@@ -1,0 +1,25 @@
+{
+    "versionLabel": "0.3",
+    "uuid": "0ba80460-c100-4450-9e69-823a7dab7c7a",
+    "appKeys": {},
+    "longName": "Drop Off Lines",
+    "versionCode": 5,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "Anti-Pickup",
+    "companyName": "edwin",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": [
+            {
+                "menuIcon": true,
+                "type": "png",
+                "name": "menu_icon",
+                "file": "images/Menu icon.png"
+            }
+        ]
+    }
+}
